@@ -16,7 +16,7 @@ You can download the source by clicking on the "Download ZIP" button on your top
 [Click here](http://www.stefanlundmark.com/t3d_awesomium/demo.zip) to download the demonstration project. It contains sample scripts which show some of the different features the pack has to offer.
 
 ## License
-The source is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+The source code is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 ## Contributions
 I welcome any contributions to the pack trough [pull requests](https://help.github.com/articles/using-pull-requests).
