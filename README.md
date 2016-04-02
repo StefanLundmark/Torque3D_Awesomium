@@ -13,7 +13,7 @@ This pack lets you embed HTML5/Flash in your applications and games. You can int
 You can download the source by clicking on the "Download ZIP" button on your top right, or by [forking and cloning](https://guides.github.com/activities/forking) this repository. It contains a Developers Guide with integration instructions which you need to follow to be able to integrate the pack into your project.
 
 ## Demonstration project
-[Click here](http://www.stefanlundmark.com/t3d_awesomium/demo.zip) to download the demonstration project. It contains sample scripts which show some of the different features of the pack.
+[Click here](http://www.stefanlundmark.com/t3d_awesomium/demo.zip) to download the demonstration project. It contains sample scripts which show some of the different features the pack has to offer.
 
 ## License
 The source is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
