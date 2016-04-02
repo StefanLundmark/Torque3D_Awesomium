@@ -1,4 +1,4 @@
-# Torque3D Awesomium Addon Pack
+# Torque 3D Awesomium Addon Pack
 Welcome!
 
 This pack lets you embed HTML5/Flash in your applications and games. You can integrate it via JavaScript to interact with elements in the game. [Click here](https://www.youtube.com/watch?v=frznHHWPAZE) to see a video of the pack in action.
