@@ -508,7 +508,7 @@ void AwContext::setResolution (const Point2I &resolution)
 {
 	if (!mTexture || mTexture.getWidth () != resolution.x || mTexture.getHeight () != resolution.y)
 	{
-		mTexture = GFX->getTextureManager ()->createTexture (resolution.x, resolution.y, GFXFormatR8G8B8A8, &GFXDefaultPersistentProfile, 0, 0);
+		mTexture = GFX->getTextureManager()->createTexture(resolution.x, resolution.y, GFXFormatR8G8B8A8, &GFXDynamicTextureProfile, 0, 0);
 		if (mView)
 		{
 			mView->Resize (resolution.x, resolution.y);
