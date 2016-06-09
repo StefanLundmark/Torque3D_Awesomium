@@ -99,7 +99,7 @@ void AwContext::copyToTexture ()
 
 		// When we resize the Awesomium surface, this can take a while as it's asynchronous.
 		// In this case we have to take a different approach when we blit the texture.
-		if (mTexture.getHeight () != surface->height () || mTexture.getWidth () != surface->width ())
+		//if (mTexture.getHeight () != surface->height () || mTexture.getWidth () != surface->width ())
 		{
 			U32 smallestWidth = mTexture.getWidth ();
 			if (surface->width () < smallestWidth)
@@ -117,18 +117,31 @@ void AwContext::copyToTexture ()
 				{
 					U32 targetIndex = ((y * mTexture.getWidth ()) + x) * 4;
 					U32 sourceIndex = ((y * surface->width ()) + x) * 4;
-					rect->bits [targetIndex] = surface->buffer () [sourceIndex];
-					rect->bits [targetIndex + 1] = surface->buffer () [sourceIndex + 1];
-					rect->bits [targetIndex + 2] = surface->buffer () [sourceIndex + 2];
-					rect->bits [targetIndex + 3] = surface->buffer () [sourceIndex + 3];
+               if (GFX->getAdapterType() == OpenGL)
+               {
+                  rect->bits[targetIndex] = surface->buffer()[sourceIndex+2]; //swizzle
+                  rect->bits[targetIndex + 1] = surface->buffer()[sourceIndex + 1];
+                  rect->bits[targetIndex + 2] = surface->buffer()[sourceIndex]; //swizzle
+                  rect->bits[targetIndex + 3] = surface->buffer()[sourceIndex + 3];
+               }
+               else
+               {
+                  rect->bits[targetIndex] = surface->buffer()[sourceIndex];
+                  rect->bits[targetIndex + 1] = surface->buffer()[sourceIndex + 1];
+                  rect->bits[targetIndex + 2] = surface->buffer()[sourceIndex + 2];
+                  rect->bits[targetIndex + 3] = surface->buffer()[sourceIndex + 3];
+               }
 				}
 			}
 		}
+      /*
 		else
 		{
 			memcpy (rect->bits, surface->buffer (), mTexture.getHeight () * mTexture.getWidth () * 4);
 		}
-
+      else
+         surface->CopyTo(rect->bits, mTexture.getHeight()*mTexture.getWidth(), mTexture.getDepth(), true, false);
+      */
 		if (mShowCursor && mCursorBitmap)
 		{
 			mCursorRenderPos = mCursorPos;
