@@ -1,3 +1,5 @@
+> Warning: 	Awesomium has been abandoned by its creators since ~2016 and is no longer available to download. Awesomium also lacks support for HTML5 and contains unfixed bugs and security flaws. **I do not recommend using it anymore.**
+
 # Torque3D Awesomium Addon Pack
 Welcome!
 
